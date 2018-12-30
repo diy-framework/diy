@@ -64,8 +64,8 @@
         $database_uri .= $password . "@"; 
         $database_uri .= trim($host) . ":";
         if(trim($port) != '') $database_uri .= trim($port);
-        else $database_uri .= (trim($scheme) === 'mysql') ? "3306/" : "5432/";
-        $database_uri .= trim($dbname);
+        else $database_uri .= (trim($scheme) === 'mysql') ? "3306" : "5432";
+        $database_uri .= "/" . trim($dbname);
             
         // write database uri to file ...
         fwrite($envfile, "DATABASE_URL = " . trim($database_uri) . "\n");
