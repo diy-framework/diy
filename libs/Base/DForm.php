@@ -380,8 +380,8 @@ class DForm {
      * the very end of a systems operations.
      */
     public static function clearSessionTemp() {
-        if (isset($_SESSION[DForm::_sessionTemp])) {
-            unset($_SESSION[DForm::_sessionTemp]);
+        if (isset($_SESSION[$this->_sessionTemp])) {
+            unset($_SESSION[$this->_sessionTemp]);
         }
     }
 

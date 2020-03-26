@@ -327,7 +327,7 @@ class Database extends PDO {
      */
     public function complexQuery($query, $bindParams = array()) {
         $this->_sql = $query;
-        $sth = $this->_prepareAndBind($bindWhereParams);
+        $sth = $this->_prepareAndBind($bindParams);
         $result = $sth->execute();
         $this->_handleError($result, __FUNCTION__);
         return $result;

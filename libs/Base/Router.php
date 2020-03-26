@@ -12,6 +12,7 @@ class Router extends SimpleRouter{
      */
 
     public static function start() : void {
+        require_once dirname(dirname(dirname(__FILE__))) . "/libs/helpers.php";
         require_once dirname(dirname(dirname(__FILE__))) . "/app/routes.php";
         parent::start();
     }

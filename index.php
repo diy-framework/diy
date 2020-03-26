@@ -17,17 +17,16 @@ use \Whoops\Handler\JsonResponseHandler;
 use \Whoops\Handler\CallbackHandler as DErrorHandler;
 use \Whoops\Util\Misc;
 use DIY\Base\Bootstrap as Application;
-use DIY\Base\Utils\DUtil;
 
 $oops = new Whoops();
-if(RUNTIME_ENVIRONMENT === 'dev'){
+if (RUNTIME_ENVIRONMENT === 'dev') {
     $handler = new PrettyPageHandler();
-    if(Misc::isAjaxRequest()){
+    if (Misc::isAjaxRequest()) {
         $handler = new JsonResponseHandler();
         $handler->setJsonApi(true);
     }
 } else {
-    $handler = new DErrorHandler(function($error) {
+    $handler = new DErrorHandler(function ($error) {
         file_put_contents("logs/app_error.log", gmdate("d.m.Y h:i:s") . ": " . $error->getMessage() . " File: " . $error->getFile() . " Line: " . $error->getLine() . PHP_EOL, FILE_APPEND | LOCK_EX);
         echo "An unknown error occured. We have captured it in our logs and we will be fixing it soon. Try again later!";
         die();

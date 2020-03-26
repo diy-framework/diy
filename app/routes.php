@@ -1,7 +1,6 @@
 <?php
 
 use DIY\Base\Router;
-use App\Controllers\HomeController;
 use Pecee\Http\Middleware\BaseCsrfVerifier;
 
 if(APP_TYPE !== 'api') Router::csrfVerifier(new BaseCsrfVerifier());
