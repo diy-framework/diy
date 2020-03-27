@@ -21,7 +21,7 @@ $ composer create-project diy/framework [project_name] -s dev
 - Run the config script.
 
 ```bash
-$ cd [project_name] && php config-setup.php
+$ cd [project_name] && php manage.php app:config
 ```
 
 # Todo
