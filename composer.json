@@ -1,9 +1,9 @@
 {
     "name": "diy/framework",
-    "description": "DoItYourself PHP Framework",
+    "description": "DoItYourself Micro Framework",
     "keywords": ["do it yourself", "framework"],
     "license": "MIT",
-    "version": "0.5",
+    "version": "0.6",
     "minimum-stability": "dev",
     "authors": [
         {

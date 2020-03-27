@@ -1,4 +1,4 @@
-# DIY PHP Framework
+# DIY Micro Framework
 A PHP minimal framework which allows you to control every bit of it.
 
 # HOW TO USE
