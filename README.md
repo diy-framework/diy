@@ -15,7 +15,7 @@ $ mv composer.phar /usr/local/bin/composer
 - Create a new project using composer.
 
 ```bash
-$ composer create-project diy/framework [project_name]
+$ composer create-project diy/framework [project_name] -s dev
 ```
 
 - Run the config script.
